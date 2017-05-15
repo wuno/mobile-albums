@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  View
+  ScrollView
 } from 'react-native';
 import AlbumDetail from './AlbumDetail';
 
@@ -28,19 +28,11 @@ class AlbumList extends Component {
 
   render() {
     return (
-      <View style={styles.viewStyle}>
+      <ScrollView>
           {this.renderAlbums()}
-      </View>
+      </ScrollView>
     );
   }
 }
-
-const styles = StyleSheet.create( {
-  viewStyle: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 10
-  }
-});
 
 export default AlbumList;
